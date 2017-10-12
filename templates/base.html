@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            {{ title }}
+        </title>
+    </head>
+        <div display="inline-block">
+            <a href="/">Main Page</a>
+            <a href="/add-post">Add Post</a>
+        </div>
+        <br>
+            <h1 style = "text-align: Center">{{ head }}</h1>
+        <br>
+
+    <body>
+
+        {% block content %}
+        {% endblock %}
+
+    </body>
+</html>

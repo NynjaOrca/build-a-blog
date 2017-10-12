@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="/add-post" method="post">
+    <label>
+        <p>Title:</p>
+        {% if tError %}
+            <p style="color: red">{{ tError }}</p>
+        {% endif %}
+            <input type="text" name="title"/>
+    </label>
+    <br>
+    <label>
+        <p>Blog:</p>
+        {% if bError %}
+            <p style="color: red">{{ bError }}</p>
+        {% endif %}
+            <textarea style="resize: none" cols="40" rows="20" name="body"></textarea>
+    </label>
+    <input type="submit" value="Add Post!">
+</form>
+
+{% endblock %}
